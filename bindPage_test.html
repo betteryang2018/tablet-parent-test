@@ -35,9 +35,9 @@
 <script src="js/bootstrap.min.js"></script>
 <script>
 $(document).ready(function() {
-  // 解决安卓手机端软键盘弹出顶起页面布局
-  var bodyHt = document.body.clientHeight;
-  $('body').height(bodyHt+'px');
+  var mainHt = $(window).height()-$('.regist_header').height()-$('.pslInfoBind_header').height()-20;
+  $('.pslInfoBind_mainCon').height(mainHt);
+
   // 搜索查询
   $('.searchIcon').click(function () {
     var searchIntVal = $('.searchInt').val();

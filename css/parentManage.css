@@ -595,7 +595,7 @@ input, select{
 }
 
 .pslInfoBind_header{
-	height: 10vh;
+	height: 0.6rem;
 }
 
 .pslInfoBind_header .inputForm{
