@@ -1,0 +1,1852 @@
+/* common css */
+html{
+	font-size: 100px;  /* 设置100px=1rem */
+} 
+
+@media screen and (min-width: 320px){
+  html{
+    font-size: 100px;
+  }
+}
+
+@media screen and (min-width: 375px){
+  html{
+    font-size: 110px;
+  }
+}
+
+@media screen and (min-width: 414px){
+  html{
+    font-size: 120px;
+  }
+}
+
+body,ul,li,p,h1,h2,h3,h4,h5,h6,form,fieldset,img,div,dl,dt,dd,i{
+	margin:0;
+	padding:0;
+	list-style: none;
+}
+
+body{
+	font-family: Open sans,Helvetica Neue, Helvetica, "Arial", sans-serif;
+	width: 100%;
+  height: 100%;
+	background: #fff;
+	font-size: 0.12rem;
+}
+
+a{
+	text-decoration: none;
+	color:#333;
+	cursor: pointer;
+	font-size: 0.14rem;
+}
+
+a:hover{
+	text-decoration: none;
+	color: #333;
+}
+
+.clear{
+	clear:both;
+}
+
+.container{
+	padding:0 0.4rem;
+}
+
+img{
+	border:0;
+	max-width: 100%;
+}
+
+.col-xs-3,.col-xs-4,
+.col-sm-3,.col-sm-4,
+.col-md-3,.col-md-4,
+.col-lg-3,.col-lg-4{
+	margin:0;
+	padding:0;
+}
+
+input[type="file"] {
+	display: block !important;
+	width: 100% !important;
+	height: 100% !important;
+	opacity: 0 !important;
+	overflow: hidden !important;
+	z-index: 100 !important;
+	margin-top: -20px;
+	padding-top: -20px;
+	top: -20px;
+}
+
+input::-webkit-input-placeholder{
+  color:#97A8AD;
+}
+input::-moz-placeholder{
+  color:#97A8AD;
+}
+input:-moz-placeholder{
+  color:#97A8AD;
+}
+input:-ms-input-placeholder{
+  color:#97A8AD;
+}
+
+/* loginPage css */
+
+.login_header{
+	width:100%;
+	margin:0.7rem auto 0.2rem;
+	text-align: center;
+}
+
+.login_header .logo{
+	display: block;
+	width:0.78rem;
+	height: 0.89rem;
+	margin: 0 auto 0.35rem;
+}
+
+.login_header .logo img{
+	max-width: 100%;
+}
+
+.login_header h5{
+	margin:0 auto;
+	font-weight: bold;
+	font-size: 0.14rem;
+}
+
+.login_main{
+	width:100%;
+	padding:0.15rem 0;
+}
+
+input, select{
+	width:100%;
+	border:1px solid #E3E8E9;
+	height: 0.41rem;
+	padding-left:0.2rem;
+	margin-bottom: 0.15rem;
+	color:#97A8AD;
+	border-radius: 0.05rem;
+	font-size:0.14rem;
+  background: #fff;
+}
+
+.login_main input{
+	padding-left:0.35rem;
+	font-size: 0.15rem;
+	padding-top: 0.03rem;
+}
+
+.login_main .telIntBox , .login_main .pswIntBox{
+	position: relative;
+}
+
+.login_main .telIntLab, .login_main .pswIntLab{
+	position: absolute;
+	top:0.11rem;
+	left:0.12rem;
+}
+
+.login_main img{
+	width:0.18rem;
+	height: 0.19rem;
+}
+
+.login_main .tipsLink{
+	margin-top: 0.1rem;
+}
+
+.login_main .tipsLink a{
+	display: inline-block;
+	padding:0.15rem;
+	margin-top: -0.15rem;
+}
+
+.login_main .tipsLink .userRegist {
+    float: left;
+    padding-left: 0.1rem;
+    font-size: 0.14rem;
+}
+
+.login_main .tipsLink .forgetPsw {
+    text-align: right;
+    padding-right: 0.1rem;
+    float: right;
+    color: #FD9162;
+    font-size: 0.13rem;
+}
+
+.loginBtn, .registBtn, .confirmBtn{
+    display: block;
+    width: 95%;
+    margin: 0 auto;
+    height: 0.4rem;
+    background: #52B7E3;
+    border: 1px solid #52B7E3;
+    border-radius: 30px;
+    position: relative;
+    top:10vh;
+    color: #fff;
+    text-decoration: none;
+	font-size: 0.15rem;
+}
+
+.login_main .errorTips{
+	display: none;
+	width:2rem;
+	border-radius: 30px;
+	text-align: center;
+	padding:0.08rem 0;
+	background: rgba(0,0,0,0.2);
+	margin:0 auto;
+	position: relative;
+	bottom:0.35rem;
+	color:#fff;
+}
+
+/* registPage css */
+
+.regist_header{
+	position: relative;
+	width:100%;
+	height: 0.45rem;
+	line-height: 0.45rem;
+	color:#fff;
+	background:#52B7E3;
+	text-align: center;
+}
+
+.regist_header h5{
+	line-height: 0.5rem;
+	font-size: 0.15rem;
+}
+
+.regist_header .returnBtn{
+	display: block;
+	width:0.3rem;
+	height: 0.3rem;
+	position: absolute;
+	left:0.2rem;
+}
+
+.icon img{
+	width:0.23rem;
+	height: 0.23rem;
+}
+
+.regist_main .inputWrap{
+	margin-top: 0.25rem;
+}
+
+.regist_content .inputWrap input, .regist_content .inputWrap select{
+	padding-left: 0.15rem;
+	width:75%;
+}
+.regist_content .inputWrap label{
+	width:20%;
+	float:left;
+	text-align: right;
+	margin-right:5%;
+	line-height: 0.41rem;
+	color:#97A8AD;
+	font-size:0.14rem;
+	font-weight:400;
+}
+
+.regist_main .container .regist-intWrap{
+	margin:0.25rem -0.2rem 0;
+}
+
+/* index css */
+
+.indexWrapper, .appMainPageWrapper, .pslInfoWrapper {
+	width:100%;
+	height: 100vh;
+	position:relative;
+    overflow: hidden;
+}
+
+.index_proslide{
+	height:30vh;
+	width:100%;
+}
+
+.index_proslide img{
+	width:100%;
+	height: 30vh;
+}
+
+.index_childInfos{
+	width:100%;
+	height: 59.5vh;
+	line-height: 0.3rem;
+	background: #E5EBEB;
+	padding:0.06rem 0.06rem 0.3rem;
+	overflow: auto;
+}
+
+.index_childInfos .container{
+	padding:0;
+}
+
+.index_childInfos .childInfoBox{
+	background: #fff;
+	border-bottom: 0.04rem solid #E5EBEB;
+	padding:0.2rem 0.3rem 0; 
+}
+
+.headPortrait{
+	width:0.6rem;
+	height:0.6rem; 
+	float:left;
+	margin-right: 0.1rem;
+	border-radius: 0.6rem;
+ }
+
+.headPortrait img{
+	width: 100%;
+	height: 100%;
+	border-radius: 50%;
+}
+
+ .index_childInfos .infoText{
+ 	float:left;
+ 	position: relative;
+ 	top:0.05rem;
+ }
+
+.index_childInfos h4,
+.index_childInfos h5,
+.index_childInfos h6{
+	margin-bottom: 0.05rem;
+}
+
+.index_childInfos h4{
+	font-size: 0.14rem;
+}
+
+.index_childInfos h5{
+	font-size: 0.12rem;
+}
+
+.index_childInfos h6{
+	font-size: 0.1rem;
+	line-height: 0.14rem;
+	color:#97A8AD;
+ 	max-width: 60vw;
+ 	overflow: hidden;
+	text-overflow:ellipsis;
+	white-space: nowrap;
+}
+
+.index_childInfos .operate{
+	text-align: center;
+	padding:0.15rem 0.16rem;
+}
+
+.indexWrapper .operateIconWrap{
+  width: 20%;
+  float: left;
+}
+
+.index_childInfos .operate .icon img{
+  width: 0.18rem;
+  height: initial;
+}
+
+.index_childInfos .operate .icon p
+{
+	font-size: 0.13rem;
+	color:#97A8AD;
+}
+.index_footer p{
+	color:#97A8AD;
+}
+
+.index_footer .ativeBtnP{
+	color:#333;
+}
+
+.index_footer{
+	height: 10.5vh;
+	text-align: center;
+	position: absolute;
+	bottom:0;
+	left:0;
+	right:0;
+	margin:0 auto;
+	width:90%;
+	background: #fff;
+} 
+
+.index_footer .container{
+	padding:0;
+	margin:0 -0.2rem;
+	border-top: 0.04rem solid #E5EBEB;
+}
+
+.index_footer .container ul{
+	width:100%;
+	height: 0.485rem;
+	position: absolute;
+	left:0;
+	top:0.08rem;
+	right:0;
+	bottom:0;
+	margin:auto;
+	background:#fff;
+}
+
+.index_footer p{
+	padding-top: 0.05rem;
+	font-size: 0.13rem;
+}
+
+.index_proslide .swiper-pagination-bullet-active{
+	background:rgba(255,255,255,0.7);
+}
+
+/*  personalInfos css */
+
+.pslInfo_header{
+	height: 15vh;
+	position: relative;
+	background: #52B7E3;
+	padding:0.13rem 0;
+	color:#fff;
+}
+
+.pslInfo_header .container,
+.pslInfo_mainCon .container{
+	padding:0 0.3rem;
+}
+
+.pslInfo_header .icon
+{
+	width:0.11rem;
+	height:0.18rem;
+	position: absolute;
+	top:50%;
+	right:0.45rem;
+}
+
+.pslInfo_header .headTxt{
+	float: left;
+	position: relative;
+	top:0.1rem;
+}
+
+.pslInfo_header .headTxt h4{
+	float: left;
+	line-height: 0.3rem;
+}
+
+.pslInfo_mainCon{
+	height: 74.5vh;
+	overflow: auto;
+	position: absolute;
+	left: 0;
+	right: 0;
+	margin: 0 auto;
+	background: #E5EBEB;
+}
+
+.pslInfo_mainCon .icon{
+	width:0.1rem;
+	height:0.18rem;
+	position: absolute;
+	right:0.45rem;
+}
+
+.pslInfo_header .icon img,
+.pslInfo_mainCon .icon img{
+	width:100%;
+	height: 100%;
+}
+
+.pslInfo_mainCon .pslInfo_box,
+.pslInfo_mainCon .operate_box,
+.pslInfo_mainCon .exitBtn{
+	background: #fff;
+	margin-bottom: 0.03rem;
+}
+
+.pslInfo_mainCon .pslInfo_box{
+	padding-bottom: 0.2rem;
+}
+
+.pslInfo_mainCon dl{
+	width:100%;
+	padding: 0.14rem 0.1rem 0.3rem;
+	border-bottom:0.01rem solid #E3E8E9;
+	font-size: 0.14rem;
+}
+
+.pslInfo_mainCon .homeAdrss,
+.pslInfo_mainCon .addBind{
+	border-bottom:0;
+}
+
+.pslInfo_mainCon .homeAdrss dd{
+	margin-left:0.1rem;
+}
+
+.pslInfo_mainCon dt{
+	color:#97A8AD;
+	float:left;
+	font-weight: 400;
+}
+
+.pslInfo_mainCon dd{
+	float:right;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	width: 70%;
+	text-align: right;
+}
+
+.pslInfo_mainCon .exitBtn{
+	text-align: center;
+	padding:0.18rem 0;
+}
+
+.pslInfo_mainCon .exitBtn a{
+	color:#FD9162;
+	padding:0.2rem;
+	text-decoration: none;
+	font-size: 0.14rem;
+}
+
+/* pslInfo_modifyPsw css */
+
+.pslInfo_modifyPsw .confirmBtn{
+	margin-top: 18vh;
+}
+
+.pslInfo_modifyPsw .container,
+.pslInfo_modifyInfos .container
+{
+	padding:0 8vw;
+}
+
+.pslInfo_modifyPsw .inputWrap label
+{
+	float:left;
+	width:28%;
+	line-height: 0.41rem;
+	color:#97A8AD;
+	font-size:0.14rem;
+	font-weight:400;
+}
+
+.pslInfo_modifyPsw .inputWrap input{
+	width:72%;
+}
+
+/* pslInfo_modifyInfos css */
+
+.pslInfo_modifyInfos .inputWrap label{
+	float:left;
+	width:17%;
+	line-height: 0.41rem;
+	color:#97A8AD;
+	text-align: left;
+	padding-right: 0.15rem;
+	font-size:0.14rem;
+	font-weight:400;
+}
+
+.pslInfo_modifyInfos .inputWrap input{
+	width:83%;
+}
+
+@media (min-width: 375px) {
+	.pslInfo_modifyInfos .inputWrap label{
+		width:16%;
+	}
+	.pslInfo_modifyInfos .inputWrap input{
+		width:84%;
+	}
+
+}
+
+.pslInfo_modifyInfos .inputWrap .wchat{
+	margin:0;
+}
+
+.pslInfo_modifyInfos .inputWrap .hAdrssLab{
+	width:100%;
+}
+.pslInfo_modifyInfos .inputWrap .homeAdrss{
+	width:100%;
+	margin:0;
+}
+
+/* pslInfo_bind css */
+
+.pslInfoBind_header .container,
+.pslInfoBind_mainCon .container{
+	padding:0 0.3rem;
+}
+
+.pslInfoBind_header{
+	height: 10vh;
+}
+
+.pslInfoBind_header .inputForm{
+	position: relative;
+}
+
+.pslInfoBind_header .searchInt{
+	background: #E5EBEB;
+	height: 0.3rem;
+	border-radius:0.3rem;
+	margin-top: 0.15rem;
+}
+
+.pslInfoBind_header .icon{
+	position: absolute;
+	top:0.19rem;
+	display: block;
+	width:0.16rem;
+	height: 0.16rem;
+}
+
+.pslInfoBind_header .icon img{
+	height: 100%;
+}
+
+.pslInfoBind_header .searchIcon{
+	right:0.35rem;
+}
+
+.pslInfoBind_header .deleteIcon{
+	right:0.1rem;
+}
+
+.pslInfoBind_mainCon{/*
+	position: absolute;*/
+	height: 81vh;
+	padding-top: 5px;
+	width: 100%;
+	box-sizing: border-box;
+}
+
+.pslInfoBind_mainCon .headPortrait{
+	width:0.36rem;
+	height: 0.36rem;
+	position: relative;
+}
+
+.pslInfoBind_mainCon .childInfo_content{
+	width:100%;
+	height: 0.8rem;
+	border-bottom: 0.01rem solid #E3E8E9;
+	margin-bottom: 0.2rem;
+}
+
+.pslInfoBind_mainCon .childInfo_content .leftPart{
+	width:88%;
+	float:left;
+}
+
+.pslInfoBind_mainCon  .infoText{
+	float: left;
+	position: relative;
+	top:0.02rem;
+}
+
+.pslInfoBind_mainCon  .infoText h6{
+	margin:0.08rem 0;
+}
+
+.gray{
+	color:#97A8AD;
+}
+
+.blue{
+	color:#52B7E3;
+}
+
+.pslInfoBind_mainCon .bindBtn{
+	float:left;
+	display: inline-block;
+	width:12%;
+	color:#52B7E3;
+	position: relative;
+	top:0.22rem;
+}
+
+.pslInfoBind_footer{
+	height: 8vh;
+	background: #fff;
+}
+
+/* 退出当前账号弹出框 */
+
+.mask {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #333;
+    filter: Alpha(Opacity=60);
+    -moz-opacity: 0.6;
+    opacity: 0.6;
+    z-index: 9998; /*这个数值比pop box小*/
+}
+
+.bodyWrap{
+	position: relative;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.pop-box{
+	display: none;
+	background: #fff;
+	width:94%;
+	height: 1rem;
+	z-index: 9999;
+	position: absolute;
+	left:0;
+	right:0.1rem;
+	margin:0 auto;
+}
+
+.pop-box .popHeader{
+	padding:0.15rem 0;
+	height: 0.5rem;
+	border-bottom:1px solid #E3E8E9;
+}
+
+.pop-box .popHeader .pophdcon{
+	width:1.5rem;
+	margin:0 auto;
+	line-height: 0.3rem;
+}
+
+.pop-box .popHeader .pophdcon h5{
+	position: relative;
+	top:0.03rem;
+}
+
+.pop-box .popHeader .pophdcon .warnIcon{
+	width:0.25rem;
+	height: 0.2rem;
+	float:left;
+	margin-right: 0.1rem;
+}
+
+.pop-box .outContent .exit,
+.pop-box .outContent .unExit{
+	display: inline-block;
+	width:50%;
+	text-align: center;
+	float:left;
+	height: 0.45rem;
+	line-height: 0.5rem;
+	margin-bottom: 0.05rem;
+	color:#97A8AD;
+	text-decoration: none;
+}
+
+.pop-box .outContent .unExit{
+	color:#FD9162;
+	border-left:1px solid #E3E8E9;
+}
+
+/* application css  */
+
+.appMainPage_header .container,
+.appMainPage_content .container{
+	padding:0 7vw;
+}
+
+.appMainPage_header{
+	height: 8vh;
+	padding-top: 0.2rem;
+}
+
+.appMainPage_header .inputForm{
+	width:75%;
+	position: relative;
+	float:left;
+}
+
+.appMainPage_header .inputForm .searchInt{
+	border: 0;
+	border-radius: 0;
+  border: 1px solid transparent;
+	border-bottom:1px solid #E3E8E9;
+	height: 0.23rem;
+  line-height: 0.23rem;
+	padding-left: 0.15rem;
+}
+
+.appMainPage_header .inputForm input[type=search]:focus{
+  outline: none;
+  border: 1px solid transparent;
+  border-bottom: 1px solid #E3E8E9;
+}
+
+.appMainPage_header .icon{
+	display: inline-block;
+	width:0.25rem;
+	height: 0.25rem;
+	padding: 0.05rem;
+}
+
+.appMainPage_header .icon img{
+	height:100%;
+}
+
+.appMainPage_header .inputForm .searchIcon{
+	position: absolute;
+	top:-0.05rem;
+	right:0.25rem;
+}
+
+.appMainPage_header .inputForm .deleteIcon{
+	position: absolute;
+	top:-0.05rem;
+	right:0.02rem;
+}
+
+.appMainPage_header .uploadBox{
+	width:0.63rem;
+	position: relative;
+	top:0.05rem;
+	float:right;
+	text-align: right;
+}
+
+.appMainPage_header .uploadBox .uploadIcon img{
+	width:0.3rem;
+	height: 0.3rem;
+	padding:0.08rem;
+	position: absolute;
+	left:0.03rem;
+	top:-0.1rem;
+}
+.appMainPage_header .uploadBox .uploadIcon p{
+	width:0.3rem;
+	height:0.3rem;
+	position: absolute;
+	left:0.3rem;
+	top:-0.02rem;
+}
+
+
+.appMainPage_content{
+	position: relative;
+	width:100%;
+	height: 81.5vh;
+	overflow: auto;
+}
+
+.bodyWrap .dvcAppManage_content{
+	height: 90vh;
+}
+
+.appMainPage_content .divider{
+	width:100vw;
+	border-bottom: 0.04rem solid #E5EBEB;
+	position: relative;
+	right:0.26rem;
+	overflow: hidden;
+}
+
+.appMainPage_content .nav-tabs{
+	width:1.8rem;
+	height: 5vh;
+	border: 0;
+	margin:0 auto 0.03rem;
+}
+
+@media(min-width: 375px){
+.appMainPage_content .nav-tabs{
+	width:1.6rem;
+}
+
+}
+
+.appMainPage_content .nav>li>a {
+    padding: 3px;
+}
+
+.appMainPage_content .nav>li>a:hover{
+	border-color: transparent;
+	border-radius: 0;
+}
+
+.appMainPage_content .nav-tabs>li.active>a, .appMainPage_content .nav-tabs>li.active>a:focus, .appMainPage_content .nav-tabs>li.active>a:hover {
+	border:0;
+	border-bottom: 2px solid #52B7E3;
+}
+
+.appMainPage_content .nav-tabs .myupload{
+	margin-right: 0.3rem;
+}
+
+.appMainPage_content .appIcon{
+	min-width: 0.41rem;
+	width:17%;
+} 
+
+@media(min-width: 475px){
+.appMainPage_content .appIcon{
+	width:10%;
+} 
+}
+
+.appMainPage_content .appIcon img{
+	width:0.41rem;
+	height: 0.41rem;
+}
+
+.appMainPage_content table{
+	width:100%;
+}
+
+.appMainPage_content tbody tr{
+	border-bottom: 1px solid #E3E8E9;
+}
+
+.appMainPage_content tbody td{
+	padding:0.05rem;
+	height: 10vh;
+}
+
+.appMainPage_content .appName{
+	width:45%;
+	font-size: 0.14rem;
+}
+
+.appMainPage_content .appName small{
+	color:#97A8AD;
+	font-size: 0.12rem;
+}
+
+.appMainPage_content .appType{
+	width:20%;
+	text-align: right;
+	color:#97A8AD;
+	font-size: 0.13rem;
+}
+
+.appMainPage_content .deleteBtn,
+.appMainPage_content .addBtn
+{
+	width:0.5rem;
+	text-align: right;
+	color:#52B7E3;
+	font-size: 0.14rem;
+	cursor: pointer;
+}
+
+/*  modifyTimeLimit */
+.timeLimit_content .modifyBtn{
+	width:0.5rem;
+	text-align: right;
+}
+
+.timeLimit_content .modifyBtn a{
+    display: inline-block;
+    width:0.5rem;
+	color:#52B7E3;
+}
+
+.appMainPage_content .tabbable .tab-content{
+	height: 74vh;
+	overflow: auto;
+}
+
+.appMainPage_footer{
+	height: 10vh;
+	border-top: 1px solid #92A2A8;
+	box-sizing:border-box;
+}
+
+/* application_upload css */
+
+
+.appUpload_mainCon .container{
+	padding:0 8vw;
+	color: #97A8AD;
+}
+
+.appUpload_mainCon label{
+	font-weight: 400;
+}
+
+.appUpload_mainCon .inputWrap .uploadPerson{
+	position: relative;
+}
+
+.appUpload_mainCon .inputWrap .uploadPerson label{
+	position: absolute;
+	top:0.125rem;
+	left:0.03rem;
+}
+
+.appUpload_mainCon .inputWrap .uploadPerson #uploadPerson_int{
+	border:0;
+	border-radius: 0;
+	border-bottom: 1px solid #E3E8E9;
+	padding-left: 0.7rem;
+}
+
+.appUpload_mainCon .inputWrap .appType,
+.appUpload_mainCon .inputWrap .uploadFile
+{
+	text-align: center;
+	position: relative;
+}
+
+.appUpload_mainCon h5{
+	color:#333;
+	margin:0.15rem 0 0.15rem 0.05rem;
+	text-align: left;
+}
+
+.appUpload_mainCon .inputWrap .appType input{
+	display: none;
+}
+
+.appUpload_mainCon .inputWrap .appType label{
+	width:28%;
+	height: 0.4rem;
+	line-height: 0.4rem;
+	border:1px solid #E3E8E9;
+	border-radius: 4px;
+	text-align: center;
+	margin:2%;
+}
+
+.appUpload_mainCon .inputWrap .appType .active{
+	background: #52B7E3;
+	color: #fff;
+}
+
+.appUpload_mainCon .inputWrap .uploadFile{
+	margin:0.5rem 0 0.7rem;
+}
+
+.appUpload_mainCon .inputWrap .uploadFile input{
+	display: none;
+}
+.appUpload_mainCon .inputWrap .uploadFile label{
+	position: relative;
+	width:100%;
+	height: 0.4rem;
+	line-height: 0.4rem;
+	border:1px solid #E3E8E9;
+	border-radius: 4px;
+	text-align: left;
+	padding-left:0.1rem;
+}
+
+.appUpload_mainCon .inputWrap .uploadFile label p{
+	float:left;
+	width:80%;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;  /*强制不换行*/
+}
+
+.appUpload_mainCon .inputWrap .uploadFile label .fileIcon{
+	float:right;
+	width:0.45rem;
+	height: 100%;
+	border-left:1px solid #E3E8E9;
+}
+
+.appUpload_mainCon .inputWrap .uploadFile label img{
+	position: absolute;
+	right:0.08rem;
+	top:0.08rem;
+	width:0.25rem;
+	height: 0.22rem;
+}
+
+/* 通讯录 */
+
+.addressList_mainCon{
+	height: 78vh;
+}
+
+.index_popDiv .popHeader .pophdcon{
+	width:1.2rem;
+}
+
+.addressList_popDiv .popHeader .pophdcon{
+	width:1.3rem;
+}
+
+.addressList_content .headPortrait{
+	width:0.49rem;
+	height: 0.49rem;
+}
+
+.addressList_content .headPortrait img{
+	width: 100%;
+	height: 100%;
+}
+
+.addressList_content .infoText{
+	position: relative;
+	top:0.1rem;
+}
+
+.addressList_mainCon .addressList_content .leftPart{
+	width:70%;
+	float:left;
+}
+
+.addressList_mainCon .addressList_content .rightPart{
+	float:right;
+	width:30%;
+	text-align: right;
+	line-height: 0.49rem;
+}
+
+.addressList_mainCon .addressList_content .rightPart .modifyBtn{
+	margin-right: 0.1rem;
+}
+
+.addressList_mainCon .addressList_content {
+    height: 0.65rem;
+}
+
+.addressList_mainCon .addressList_content h6{
+	font-size: 0.1rem;
+}
+
+/* addressList_addContacts  css */
+
+.addContacts_main .addPortrait_wrap{
+	text-align: center;
+	margin:0.5rem 0 0.3rem;
+}
+.addPortrait_wrap img{
+	width:100%;
+	height: 100%;
+	border-radius: 50%;
+}
+
+.addContacts_main .addPortrait_wrap label{
+	width:0.86rem;
+	height: 0.86rem;
+}
+
+.addContacts_main #addPortrait{
+	display: none;
+}
+
+.addContacts_main .completeBtn{
+	margin-top: 0.4rem;
+}
+
+.addContacts_main .inputWrap .lab1,
+.addContacts_main .inputWrap .lab2,
+.addContacts_main .inputWrap .lab3
+{
+	width:15%;
+	float:left;
+	line-height: 0.41rem;
+	color:#97A8AD;
+	font-size:0.14rem;
+	font-weight:400;
+}
+.addContacts_main .inputWrap .nameInt,
+.addContacts_main .inputWrap .telInt,
+.addContacts_main .inputWrap .tipsInt{
+	width:85%;
+}
+
+
+
+
+	/*  appBlackList css */
+
+.appBlackList_header{
+	height: 7vh;
+	line-height: 7vh;
+} 
+
+.appBlackList_header .returnBtn{
+	position: absolute;
+	top:0;
+}
+
+.bodyWrap .appBlackList_content{
+	height: 80vh;
+}
+
+.appBlackList_content .blackList_tableTit{
+	font-size: 0.13rem;
+	color:#7D8C92;
+	line-height: 0.2rem;
+	height: 4.5vh;
+	line-height: 4.5vh;
+	background: #E5EBEB;
+	margin:0 -7vw;
+	padding:0 7vw;
+}
+
+.appBlackList_content tbody tr:nth-last-child(1){
+	border:0;
+}
+
+.appBlackList_content .allListTable_wrap,
+.appBlackList_content .blackListTable_wrap
+{
+	height: 38.5vh;
+	overflow: auto;
+}
+
+.appBlackList_content .blackListTable_wrap
+{
+	height: 36.5vh;
+	overflow: auto;
+}
+
+/* timeLimit css */
+
+.timeLimit_header .addBtn{
+	position: absolute;
+	top:0.03rem;
+	right:7vw;
+	width:0.15rem;
+	height:0.15rem;
+}
+
+.timeLimit_header .addBtn img{
+	width: 100%;
+	height: 100%;
+}
+
+.returnBtn img{
+	width:0.23rem;
+	height: 0.23rem;
+}
+
+.timeLimit_content .tipsText{
+	color:#97A8AD;
+	font-size: 0.12rem;
+	padding:0.3rem 0.1rem;
+	border-bottom: 1px solid #E3E8E9;
+}
+
+.timeLimit_content tbody td{
+	height: 9vh;
+}
+
+.timeLimit_content{
+	height: 88vh;
+	overflow: auto;
+}
+
+.timeLimit_popDiv .popHeader .pophdcon{
+	width:1.5rem;
+}
+
+/* addTimeLimit css */
+
+.addTimeLimit_content{
+	height: 83vh;
+}
+
+.addTimeLimit_content .container{
+	padding:0 7vw;
+}
+
+#layui-laydate1 .layui-laydate-header,
+#layui-laydate2 .layui-laydate-header
+ {
+    display: none;
+}
+
+.layui-laydate-list>li:nth-last-child(1){
+	display: none;
+}
+
+.layui-laydate-list{
+	overflow: hidden;
+}
+
+.layui-laydate-list>li{
+	width:50%;
+}
+
+.layui-laydate-content table tr:nth-child(1){
+	display: none;
+}
+
+.addTimeLimit_content .weekDay_box{
+	width:87vw;
+	height: 32vw;
+	margin:0.3rem auto 0.2rem;
+	border-bottom: 1px solid #E3E8E9;
+}
+
+.addTimeLimit_content .weekDay_box ul li{
+	float:left;
+	color:#97A8AD;
+	border:1px solid #E3E8E9;
+	width: 20vw;
+	padding:2vw;
+	margin: 2vw 0.8vw;
+	text-align: center;
+	font-size: 0.13rem;
+	border-radius: 2px;
+}
+
+.addTimeLimit_content .weekDay_box ul .active{
+	background:#52B7E3;
+	color:#fff;
+}
+
+.addTimeLimit_content .timeInterval_box{
+	width:70vw;
+	margin:0 auto;
+}
+
+.addTimeLimit_content .timeInterval_box .timeStart,
+.addTimeLimit_content .timeInterval_box .timeEnd{
+	height: 8vw;
+	margin-top: 10vw;
+}
+
+.addTimeLimit_content .timeControl{
+	position: relative;
+}
+
+.addTimeLimit_content .timeControl .caretdown{
+	position: absolute;
+	top:0.05rem;
+	right:0.1rem;
+	width:0.14rem;
+	height: 0.14rem;
+}
+
+.addTimeLimit_content .timeInterval_box .timeStartTit,
+.addTimeLimit_content .timeInterval_box .timeEndTit
+{
+	width:25vw;
+	float:left;
+	line-height: 0.34rem;
+	color:#97A8AD;
+	font-size: 0.14rem;
+}
+
+.addTimeLimit_content .timeInterval_box input{
+	width:45vw;
+	border-radius: 2px;
+	height: 0.34rem;
+	float:left;
+}
+
+.addTimeLimit_content .confirmBtn{
+	margin-top: 20vw;
+}
+
+/* deviceInfos */
+
+.deviceInfos_header .container,
+.deviceInfos_content .container{
+	padding:0 7vw;
+}
+
+.deviceInfos_content{
+	position: relative;
+	color:#97A8AD;
+	height: 90vh;
+	overflow: auto;
+}
+
+.deviceInfos_content .controlBox{
+	margin:0 -3vw;
+	padding:0 3vw;
+}
+
+.deviceInfos_content .control_tit span{
+	color:#97A8AD;;
+}
+
+.deviceInfos_content .controlBox .switch {
+	position:relative;
+    float:right;
+    display: inline-block;
+    vertical-align: middle;
+    width: 0.46rem;
+    height: 0.2rem;
+    margin: 0 0.1rem;
+    font-weight: 700;
+    background: #52B7E3;
+    border-radius: 34px;
+}
+
+.deviceInfos_content .controlBox .slider {
+    display: block;
+    background: #fff;
+    width: 0.18rem;
+    height: 0.14rem;
+    border-radius: 0.1rem;
+    z-index: 99999;
+    position: absolute;
+    left: 3px;
+    top: 3px;
+}
+
+.deviceInfos_content .controlBox .control_tit{
+	margin:0.2rem 0 0.08rem;
+}
+
+.deviceInfos_content .controlBox .control_con{
+	width: 100%;
+	height: 0.35rem;
+	position: relative;
+}
+
+.deviceInfos_content .controlBox .control_con .control_conTit{
+	float:left;
+	width:20%;
+	line-height: 0.35rem;
+	color:#333;
+}
+
+.deviceInfos_content .controlBox .control_con input{
+	width:80%;
+	float:left;
+	height: 0.35rem;
+	color:#333;
+	padding-left: 0.15rem;
+}
+
+.deviceInfos_content .controlBox .control_con i{
+	font-style: normal;
+	position: absolute;
+	line-height: 0.35rem;
+	right:0.1rem;
+}
+
+.deviceInfos_content .controlBox .control_con .prtTimeMin{
+	top:0.5rem;
+}
+
+.deviceInfos_content .controlBox .control_con .modifyBtn{
+	height:0.35rem;
+	line-height: 0.35rem;
+	position: absolute;
+	right:0;
+	border-left:1px solid #E3E8E9;
+	padding:0 0.12rem;
+	cursor: pointer;
+}
+
+.deviceInfos_content .operate_box{
+	border-bottom: 4px solid #E5EBEB;
+	margin:0 -7vw;
+	padding:0 7vw;
+	height: 0.55rem;
+}
+
+.deviceInfos_content dl {
+    width: 100%;
+    height: 0.2rem;
+    padding-top: 0.1rem;
+    margin-bottom: 0.15rem;
+    font-size: 0.14rem;
+}
+
+.deviceInfos_content dt {
+    color: #97A8AD;
+    float: left;
+    font-weight: 400;
+}
+
+.deviceInfos_content dd {
+    float: right;
+}
+
+.deviceInfos_content .icon {
+    width: 0.11rem;
+    height: 0.18rem;
+    position: absolute;
+    right: 0.45rem;
+}
+
+.deviceInfos_content .deviceInfos_box{
+	padding-top: 0.1rem;
+	margin:0 -3vw;
+}
+
+.deviceInfos_content .deviceInfos_box ul li{
+	width:100%;
+	height: 0.43rem;
+	line-height: 0.43rem;
+	border-bottom: 1px solid #E3E8E9;
+	padding:0 6vw;
+}
+
+.deviceInfos_content .deviceInfos_box ul .titTxt{
+	float:left;
+	width:50%;
+}
+
+.deviceInfos_content .deviceInfos_box ul .valTxt{
+	float:right;
+	width:50%;
+	text-align: right;
+	color:#333;
+}
+
+.deviceInfos_content .submitBtn{
+	background: none;
+	padding: 0;
+	height: 0.4rem;
+	margin:0.1rem 0;
+}
+
+/* deviceInfos_position css */
+
+.dvcPosition_content{
+	height: 90vh;
+	overflow: auto;
+}
+
+.dvcPosition_content .container{
+	padding: 0 7vw;
+}
+
+.dvcPosition_content ul li{
+	border-bottom: 1px solid #E3E8E9;
+	padding:0.1rem 3vw;
+}
+
+.dvcPosition_content ul li .dayTime .date{
+	margin-right: 0.05rem;
+}
+
+.dvcPosition_content ul li .schoolName{
+	color: #97A8AD;
+}
+
+/* deviceInfos_appManage css */
+
+.dvcAppManage_content .appName{
+	font-size: 0.14rem;
+	width:50%;
+}
+
+.dvcAppManage_content .netIcon{
+	width:18%;
+	text-align: right;
+}
+
+.dvcAppManage_content .deskIcon{
+	width:0.5rem;
+	text-align: right;
+}
+
+.dvcAppManage_content .icon img{
+	height: auto;
+}
+
+.netSwitch_popDiv .content-wrap .popHeader .pophdcon{
+	width:1.8rem;
+}
+
+/* 权限设置页面 */
+
+.setPower_content{
+	height: 86vh;
+}
+
+.setPower_content .tipsText{
+	color:#97A8AD;
+	font-size: 0.12rem;
+	padding:0.25rem 0.1rem;
+	border-bottom: 1px solid #E3E8E9;
+}
+
+.setPower_content .controlBox li{
+	border-bottom:1px solid #E3E8E9;
+	height: 0.45rem;
+	line-height: 0.45rem;
+	padding:0 0.05rem;
+}
+
+.setPower_content .controlBox, .setPower_content .controlBox a{
+	color:#97A8AD;
+	font-size: 0.14rem;
+}
+
+.setPower_content .controlBox .listItem span{
+	float:left;
+}
+
+.setPower_content .controlBox .detailBtn{
+	float:right;
+	color:#97A8AD;
+}
+
+.setPower_content .controlBox .listItem .roundBtn {
+	display: block;
+    border: 2px solid #9FAEB3;
+    width: 14px;
+    height: 14px;
+    border-radius: 14px;
+    float: left;
+    position: relative;
+    top:0.13rem;
+    cursor: pointer;
+    margin-right:0.12rem;
+}
+
+.setPower_content .controlBox .active .listItem{
+	color:#333;
+	font-weight:bold;
+}
+
+.setPower_content .controlBox .active .roundBtn{
+	border: 2px solid #52B7E3;
+}
+
+.setPower_content .controlBox .active .sltCircle {
+    width: 2px;
+    height: 2px;
+    border: 2px solid #52B7E3;
+    border-radius: 2px;
+    position: absolute;
+    top: 3px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+}
+
+.setPower_content .controlBox .active + .detailBtn{
+	color:#52B7E3;
+}
+
+.nav-tabs>li>a{
+	border:0;
+}
+
+.setPower_content .confirmBtn{
+	margin-top: 0.5rem;
+}
+
+.setPower_popDiv .popHeader .pophdcon{
+	width:1.9rem;
+}
+
+.tipsBox{
+	display: none;
+	width:1.4rem;
+	height: 0.41rem;
+	line-height: 0.41rem;
+	text-align: center;
+	background: rgba(0,0,0,0.7);
+	color:#fff;
+	border-radius: 0.3rem;
+	position: absolute;
+	left:0;
+	right:0;
+	bottom:0.3rem;
+	margin:0 auto;
+	font-size: 0.14rem;
+}
+
+.gray{
+  color: #97A8AD;
+}
+
+.message_mainCon{
+  height: 90vh;/*
+	position: unset;
+  overflow: unset;*/
+}
+
+.message_mainCon .msgUlWrap{
+  height: 70vh;
+  overflow: auto;
+  padding: 20px 0.2rem 0;
+	box-sizing: border-box;
+}
+
+.message_mainCon .msgTime{
+  color: #97A8AD;
+}
+
+.message_mainCon .msgSender{
+  margin-left: 20px;
+  color: #97A8AD;
+}
+
+.message_mainCon span{
+  float: left;
+}
+
+.message_mainCon .deleteBtn{
+  float: right;
+  cursor: pointer;
+  padding: 0 5px;
+  color: #52B7E3;
+}
+
+.message_mainCon .topBar{
+  width: 100%;
+  height: 30px;
+}
+
+.message_mainCon .msgContent{
+	text-indent: 0.2rem;
+  line-height: 22px;
+  padding: 0 10px;
+}
+
+.message_mainCon .childInfo_content{
+  width: 100%;
+  height: unset;
+  padding-bottom: 20px;
+  box-sizing: border-box;
+  border-bottom: 0.01rem solid #E3E8E9;
+  margin-bottom: 0.2rem;
+}
+
+.message_mainCon ul li:nth-last-of-type(1){
+  padding-bottom: 0;
+  margin-bottom: 0;
+}
+
+.message_mainCon .sendBox{
+  padding: 0 0.2rem;
+  width: 100%;
+  height: 20vh;
+  overflow: hidden;
+  padding-top: 25px;
+}
+
+.message_mainCon .textareaWrap{
+  width: 70%;
+  height: 15vh;
+  float: left;
+}
+
+.message_mainCon .textareaWrap textarea{
+  width: 100%;
+  height: 100%;
+  resize: none;
+  padding: 10px;
+  overflow: auto;
+	border-radius: 0.05rem;
+}
+
+.message_mainCon .textareaWrap textarea:focus{
+  outline: none;
+  border: 1px solid #97A8AD;
+}
+
+.message_mainCon .sendBox .sendBtn{
+  float: right;
+  width: 25%;
+  height: 15vh;
+  line-height: 15vh;
+  text-align: center;
+  border: 1px solid #97A8AD;
+  cursor: pointer;
+  background: -webkit-linear-gradient(#F7F8F0,#D8EDF2);
+  background: -o-linear-gradient(#F7F8F0,#D8EDF2);
+  background: -moz-linear-gradient(#F7F8F0,#D8EDF2);
+  background: linear-gradient(#F7F8F0,#D8EDF2);
+	border-radius: 0.05rem;
+}
+
+.message_mainCon .sendBox .sendBtn:active{
+  background: -webkit-linear-gradient(#F7F8F0,#E6F3F6);
+  background: -o-linear-gradient(#F7F8F0,#E6F3F6);
+  background: -moz-linear-gradient(#F7F8F0,#E6F3F6);
+  background: linear-gradient(#F7F8F0,#E6F3F6);
+  color: #97A8AD;
+}
+
+.message_popDiv .popConInner .popHeader .pophdcon{
+  width: 1.8rem;
+}
+
+.message_mainCon .msgIdCase{
+  display: none;
+}
+
+.codeNumBox{
+  display: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

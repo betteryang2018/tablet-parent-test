@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0, user-scalable=no"/>    
+  <meta name="format-detection" content="telephone=no" /> 
+  <meta http-equiv="Cache-Control" content="no-siteapp"> 
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black"> 
+  <meta name="apple-mobile-web-app-title" content="绑定">
+  <title>绑定</title>
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="css/parentManage.css">
+</head>
+<body>
+  <header class="regist_header">
+    <div class="container">
+      <a class="icon returnBtn" onclick="javascript:window.history.back();return false;"><img src="images/return.png"></a>
+      <h5>添加绑定</h5>
+    </div>
+  </header>
+  <div class="pslInfoBind_header">
+    <div class="container">
+      <div class="inputForm">
+        <input class="searchInt" type="search" name="" value="" placeholder="请输入学生姓名">
+        <a class="icon searchIcon" href="#"><img src="images/search.png"></a>
+        <a class="icon deleteIcon" href="#"><img src="images/delete.png"></a>
+      </div>
+    </div>
+  </div>
+  <section class="pslInfoBind_mainCon">
+    <ul class="container"><li class="childInfo_content"><div class="leftPart"><div class="headPortrait"><a><img src="http://wx.amdox.com.cn/static/school/10000/10000/10000/pic/20180801095113zhangxiaoli.jpg"></a></div><div class="infoText"><h5>张晓丽<small>&nbsp;&nbsp;&nbsp;(ab12340)</small></h5><h6>一年级101班</h6><h6 class="gray">东莞市松山湖区南方外国语学校</h6></div></div><a class="bindBtn" href="/user/boundChild?studentId=10000&amp;studentName=张晓丽">绑定</a></li><li class="childInfo_content"><div class="leftPart"><div class="headPortrait"><a><img src="http://wx.amdox.com.cn/static/user/defaultPhoto.png"></a></div><div class="infoText"><h5>张靓颖<small>&nbsp;&nbsp;&nbsp;(ab12343)</small></h5><h6>一年级101班</h6><h6 class="gray">东莞市松山湖区南方外国语学校</h6></div></div><a class="bindBtn" href="/user/boundChild?studentId=10003&amp;studentName=张靓颖">绑定</a></li><li class="childInfo_content"><div class="leftPart"><div class="headPortrait"><a><img src="http://wx.amdox.com.cn/static/user/defaultPhoto.png"></a></div><div class="infoText"><h5>张威<small>&nbsp;&nbsp;&nbsp;(ab12345)</small></h5><h6>一年级101班</h6><h6 class="gray">东莞市松山湖区南方外国语学校</h6></div></div><a class="bindBtn" href="/user/boundChild?studentId=10005&amp;studentName=张威">绑定</a></li></ul>
+  </section>
+
+<script src="js/jquery-3.2.1.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script>
+$(document).ready(function() {
+  // 解决安卓手机端软键盘弹出顶起页面布局
+  var bodyHt = document.body.clientHeight;
+  $('body').height(bodyHt);
+  // 搜索查询
+  $('.searchIcon').click(function () {
+    var searchIntVal = $('.searchInt').val();
+    $.ajax({
+      url: "/user/getStudentListByName",
+      type: "GET",
+      data: {"studentName": searchIntVal},
+      dataType: "json",
+      success: function (result) {
+        tablePinJieFun(result);
+      },
+      error:function () {
+          // 清除当前上传页面的表格内容
+          $('.pslInfoBind_mainCon ul').empty();
+      }
+    });
+  });
+
+  // 点击键盘搜索，触发搜索功能
+  $(".searchInt").on('keypress',function(e) {
+    var keycode = e.keyCode;
+    var searchIntVal = $('.searchInt').val();
+    if(keycode=='13') {
+      e.preventDefault();
+      $.ajax({
+        url: "/user/getStudentListByName",
+        type: "GET",
+        data: {"studentName": searchIntVal},
+        dataType: "json",
+        success: function (result) {
+          tablePinJieFun(result);
+        },
+        error:function () {
+          // 清除当前上传页面的表格内容
+          $('.pslInfoBind_mainCon ul').empty();
+        }
+      });
+    }
+  });
+
+  // 将返回内容拼接到当前页面
+  function tablePinJieFun(result){
+    // 清除当前上传页面的表格内容
+    $('.pslInfoBind_mainCon ul').empty();
+    $(result).each(function(index, item){
+      var liConTxt = '<li class="childInfo_content"><div class="leftPart"><div class="headPortrait"><a><img src="http://wx.amdox.com.cn'
+        + item.studentPicPath +'"></a></div><div class="infoText"><h5>' + item.studentName + '<small>&nbsp;&nbsp;&nbsp;(' + item.studentNo
+        + ')</small></h5><h6>' + item.className +  '</h6><h6 class="gray">' + item.schoolName + '</h6></div></div>' +
+        '<a class="bindBtn" href="/user/boundChild?studentId=' + item.id + '&studentName=' +  item.studentName + '">绑定</a></li>';
+            $('.pslInfoBind_mainCon ul').append(liConTxt);
+    });
+  }
+
+  // 清除搜索框内容
+  $('.deleteIcon').click(function(){
+    $('.searchInt').val('').attr('placeholder','搜索');
+    $('.pslInfoBind_mainCon ul').empty();
+  });
+
+  // 点击绑定，跳转到对应页面
+  /*$('.bindBtn').click(function(){
+    location.href="#";
+    })*/
+});
+</script>
+</body>
+</html>
