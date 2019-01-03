@@ -790,7 +790,8 @@ input, select{
 	padding-left: 0.15rem;
 }
 
-.appMainPage_header .inputForm input[type=search]:focus{
+.appMainPage_header .inputForm input[type=search]:focus,
+.pslInfoBind_header .inputForm input[type=search]:focus{
   outline: none;
   border: 1px solid transparent;
   border-bottom: 1px solid #E3E8E9;
